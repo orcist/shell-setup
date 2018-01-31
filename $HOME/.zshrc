@@ -101,5 +101,5 @@ LS_COLORS="ow=01;36;41" && export LS_COLORS
 
 source ~/.bash_aliases
 
-export HOME=/mnt/c/Users/orcis
+export HOME=/mnt/c/Users/crispy
 export ZSHOME=/home/crispy
