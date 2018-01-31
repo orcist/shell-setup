@@ -7,7 +7,7 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="bira"
+# ZSH_THEME="bira"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -60,6 +60,7 @@ ZSH_THEME="bira"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -93,13 +94,39 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Set ls alias for the my most common use-case
-alias l="ls -al"
+#Change ls colours
+LS_COLORS="ow=01;36;40" && export LS_COLORS
 
-# Change directory background color for ls commands
-LS_COLORS="ow=01;36;41" && export LS_COLORS
+#make cd use the ls colours
+zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
+autoload -Uz compinit
+compinit
 
-source ~/.bash_aliases
+# Source bash aliases
+source /home/crispy/.bash_aliases
+
+# Antigen ZSH theme & plugin manager
+source /home/crispy/antigen.zsh
+
+antigen use oh-my-zsh
+
+antigen bundle git
+antigen bundle pip
+antigen bundle command-not-found
+antigen bundle common-aliases
+antigen bundle compleat
+antigen bundle git-extras
+antigen bundle git-flow
+antigen bundle npm
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-history-substring-search ./zsh-history-substring-search.zsh
+
+antigen bundle mafredri/zsh-async
+antigen bundle marszall87/lambda-pure
+
+antigen theme lambda-pure
+
+antigen apply
 
 export HOME=/mnt/c/Users/crispy
 export ZSHOME=/home/crispy
