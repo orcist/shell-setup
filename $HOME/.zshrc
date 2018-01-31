@@ -93,5 +93,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-source ~/.bash_aliases
+# Set ls alias for the my most common use-case
+alias l="ls -al"
 
+# Change directory background color for ls commands
+LS_COLORS="ow=01;36;41" && export LS_COLORS
+
+source ~/.bash_aliases
