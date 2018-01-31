@@ -100,3 +100,6 @@ alias l="ls -al"
 LS_COLORS="ow=01;36;41" && export LS_COLORS
 
 source ~/.bash_aliases
+
+export HOME=/mnt/c/Users/orcis
+export ZSHOME=/home/crispy
