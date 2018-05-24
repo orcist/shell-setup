@@ -12,8 +12,8 @@ sudo apt-get install -y nodejs
 curl -L git.io/antigen > antigen.zsh
 
 # set up access rights for compinit security requirements
-chown "$(whoami)" /home/crispy/.oh-my-zsh -R
-chmod go-w /home/crispy/.oh-my-zsh -R
+chown "$(whoami)" /home/"$(whoami)"/.oh-my-zsh -R
+chmod go-w /home/"$(whoami)"/.oh-my-zsh -R
 
-chown "$(whoami)" /home/crispy/.antigen -R
-chmod go-w /home/crispy/.antigen -R
+chown "$(whoami)" /home/"$(whoami)"/.antigen -R
+chmod go-w /home/"$(whoami)"/.antigen -R
