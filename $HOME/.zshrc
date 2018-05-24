@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/crispy/.oh-my-zsh
+  export ZSH=/home/"$(whoami)"/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -103,10 +103,10 @@ autoload -Uz compinit
 compinit
 
 # Source bash aliases
-source /home/crispy/.bash_aliases
+source /home/"$(whoami)"/.bash_aliases
 
 # Antigen ZSH theme & plugin manager
-source /home/crispy/antigen.zsh
+source /home/"$(whoami)"/antigen.zsh
 
 antigen use oh-my-zsh
 
@@ -128,5 +128,5 @@ antigen theme lambda-pure
 
 antigen apply
 
-export HOME=/mnt/c/Users/crispy
-export ZSHOME=/home/crispy
+# Map docker port to windows exposed Docker port
+export DOCKER_HOST=tcp://0.0.0.0:2375
