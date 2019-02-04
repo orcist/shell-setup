@@ -3,9 +3,9 @@
 # Check to see if a pipe exists on stdin.
 if [ -p /dev/stdin ]; then
   echo "Piping input to vscode..."
-  cat - > .ced-cache
-  code .ced-cache -rw
-  rm -f .ced-cache
+  cat - > .vs-cache
+  code .vs-cache -rw
+  rm -f .vs-cache
 else
   # Checking to ensure a filename was specified and that it exists
   if [ -f "$1" ]; then
