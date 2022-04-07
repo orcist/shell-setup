@@ -1,12 +1,13 @@
 # install git, zsh & fonts-powerline
-sudo apt-get install -y git zsh fonts-powerline
+sudo apt-get install -y git zsh
 
 # install oh-my-zsh
-curl -L https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# install node
-curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-sudo apt-get install -y nodejs
+# install nvm & node
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+# -> restart console now
+nvm install --lts
 
 # install antigen zsh manager
 curl -L git.io/antigen > antigen.zsh
