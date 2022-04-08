@@ -1,6 +1,10 @@
 # install git, zsh & fonts-powerline
 sudo apt-get install -y git zsh
 
+# install missing powerline fonts
+git clone https://github.com/powerline/fonts.git
+# you need to open powershell as admin and .\install.ps1 now
+
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
