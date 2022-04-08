@@ -120,10 +120,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# export PATH="$HOME/.nodenv/bin:$PATH"
-
-export PATH=$PATH:$HOME/.stacktape/bin
-
 # Launch zsh
 if [ -t 1 ]; then
   exec zsh
