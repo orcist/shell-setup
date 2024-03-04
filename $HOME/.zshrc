@@ -53,3 +53,15 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 source /home/crispy/.bash_aliases
+
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# Change directory background color for ls commands
+LS_COLORS="ow=01;36;41" && export LS_COLORS
+
+# Skip words using ctrl+arrow
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
