@@ -46,8 +46,8 @@ fi
 # Then, source plugins and add commands to $PATH
 zplug load --verbose
 
-# Map docker port from Windows
-export DOCKER_HOST=tcp://0.0.0.0:2375
+# Map docker port from Windows, only for WSL 1
+# export DOCKER_HOST=tcp://0.0.0.0:2375
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
